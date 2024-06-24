@@ -112,9 +112,12 @@
 			</div>
 			<div class="button">探索更多</div>
 		</div>
+    <MhFooter />
 	</div>
 </template>
-<script setup></script>
+<script setup>
+import MhFooter from '@/components/footer.vue';
+</script>
 <style lang="scss" scoped>
 @mixin btn() {
 	width: 192px;

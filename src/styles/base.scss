@@ -1,0 +1,31 @@
+// 显示省略号
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*---滚动条默认显示样式--*/
+::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+/*---滚动条大小--*/
+::-webkit-scrollbar {
+  width: 0;
+}
+
+/*---滚动框背景样式--*/
+::-webkit-scrollbar-track-piece {
+  display: none;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}

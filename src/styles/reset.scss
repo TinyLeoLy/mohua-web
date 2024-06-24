@@ -1,0 +1,93 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'PingFang SC', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+html {
+  height: 100%;
+}
+#app,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+em,
+i {
+  font-style: normal;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  cursor: default;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  border: 0;
+  margin: 0;
+  max-width: 100%;
+  padding: 0;
+  vertical-align: middle;
+}
+
+input,
+textarea,
+button {
+  outline: none;
+  padding: 0;
+  border: 0;
+  outline: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  background-color: transparent;
+  box-sizing: border-box;
+}
+
+input,
+textarea {
+  border: 0;
+}
+
+label {
+  font-weight: normal;
+  margin-bottom: 0px;
+}
+
+table {
+  font-size: 16px;
+  margin-bottom: 0;
+  width: 100%;
+}

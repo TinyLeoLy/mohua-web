@@ -3,7 +3,7 @@
 		<div class="footer-left flex-column">
 			<img class="logo" src="@/assets/images/home/logo.png" alt="" />
 			<span class="guide">联系我们</span>
-			<div class="vector" src="@/assets/images/home/vector.png" alt=""></div>
+			<div class="vector"></div>
 
 			<div class="line">
 				<img src="@/assets/images/home/phone.png" alt="" />

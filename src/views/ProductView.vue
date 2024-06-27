@@ -23,7 +23,7 @@
 						结合先进的大语言模型技术，轻松识别各种文档，自动生成专属知识库，
 						带来知识归纳、构建、问答、推荐等体验，帮助用户提升工作效率。
 					</p>
-					<div class="btn">探索更多</div>
+					<div class="btn" @click="jumpTo('case-pkqa')">探索更多</div>
 				</div>
 				<img src="@/assets/images/product/01.png" alt="" />
 			</div>
@@ -90,6 +90,12 @@
 </template>
 <script setup>
 import MhFooter from '@/components/footer.vue';
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+const jumpTo = (name) => {
+	router.push({ name });
+};
 </script>
 <style lang="scss" scoped>
 .product-view {

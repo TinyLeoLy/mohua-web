@@ -87,6 +87,48 @@
 				</div>
 			</div>
 		</div>
+		<div class="service">
+			<div class="title">免费产品和选配服务</div>
+			<div class="warper flex-row">
+				<div class="item flex-column">
+					<img src="@/assets/images/solution/s_01.png" alt="" />
+					<div class="name">
+						北京模华科技有限公司提供一揽子免费产
+						品，帮助客户快速上手体验大模型带来的
+						生产力提升，涵盖了AI问答、AI绘画、私
+						有文件/数据库/知识图谱问答等等，同时 提供培训。
+					</div>
+				</div>
+				<div class="item flex-column">
+					<img src="@/assets/images/solution/s_02.png" alt="" />
+					<div class="name">
+						北京模华科技有限公司提供大量免费的大
+						模型技术相关技术框架，涵盖了大模型可
+						视化训练(预训练、微调、RLHF)，大模型
+						部署，以及30余种大模型应用套件，5套
+						智能体应用框架。同步提供大模型从原理 到应用的培训辅导。
+					</div>
+				</div>
+				<div class="item flex-column">
+					<img src="@/assets/images/solution/s_03.png" alt="" />
+					<div class="name">
+						北京模华科技有限公司提供的长文写作平
+						台，基于前后端分离架构以及Vue3、uni-
+						app、ThinkPHP6.x、PHP8.0技术栈开发，
+						包含PC端、H5自适应，只需要几分钟，大 模型为客户生成万字长文。
+					</div>
+				</div>
+				<div class="item flex-column">
+					<img src="@/assets/images/solution/s_04.png" alt="" />
+					<div class="name">
+						依托北京模华科技有限公司免费提供的智
+						能体搭建平台，客户能轻松构建基于多代 理对话的下一代 LLM
+						应用程序。它简化了 复杂的 LLM 工作流程的编排、自动化和优
+						化。它最大限度地提高了 LLM 模型的性能 并克服了它们的弱点。
+					</div>
+				</div>
+			</div>
+		</div>
 		<MhFooter />
 	</div>
 </template>
@@ -288,6 +330,48 @@ import MhFooter from '@/components/footer.vue';
 				position: absolute;
 				width: 54px;
 				height: 24px;
+			}
+		}
+	}
+	.service {
+		width: 100%;
+		height: 727px;
+		background: linear-gradient(180deg, #ffffff 0%, #d3e6ff 100%);
+		.title {
+			margin-top: 62px;
+			margin-bottom: 53px;
+			height: 50px;
+			font-weight: bold;
+			font-size: 36px;
+			color: #333333;
+			line-height: 42px;
+			text-align: center;
+		}
+		.warper {
+			justify-content: center;
+			.item {
+				align-items: center;
+				margin-right: 32px;
+				width: 321px;
+				height: 466px;
+				background: #ffffff;
+				border-top: 3px #177cbe solid;
+				img {
+					margin-top: 32px;
+					margin-bottom: 14px;
+					width: 296px;
+					height: 237px;
+				}
+				.name {
+					width: 252px;
+					font-weight: 500;
+					font-size: 14px;
+					color: #555555;
+					line-height: 1.5em;
+				}
+			}
+			.item:last-child {
+				margin-right: unset;
 			}
 		}
 	}

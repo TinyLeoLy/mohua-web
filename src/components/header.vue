@@ -40,17 +40,19 @@ const currentRouteName = computed(() => route.name);
 	align-items: center;
 	position: sticky;
 	top: 0;
-	padding-left: 270px;
+	padding: 0 270px;
 	width: 100%;
+	min-width: 1600px;
 	height: 88px;
 	background: #fff;
 	.logo {
-		margin-right: 212px;
+		// margin-right: 212px;
 		width: 274px;
 		height: 60px;
 		cursor: pointer;
 	}
 	.nav {
+		margin-left: auto;
 		font-family: PingFang SC;
 		font-weight: 500;
 		font-size: 18px;

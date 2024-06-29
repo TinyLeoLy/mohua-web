@@ -55,10 +55,11 @@ import { ref } from 'vue';
 .mh-footer {
 	align-items: center;
 	width: 100%;
+	min-width: 1600px;
 	height: 423px;
 	background: #f2f4f8;
 	align-items: center;
-	padding-left: 270px;
+	padding: 0 270px;
 }
 .footer-left {
 	.logo {
@@ -107,9 +108,11 @@ import { ref } from 'vue';
 	}
 }
 .footer-right {
-  margin-left: 306px;
+  margin-left: auto;
 	div {
     margin-right: 124px;
+		// max-width: 237px;
+		// min-width: 150px;
 		display: flex;
 		flex-direction: column;
 		font-family: PingFang SC;

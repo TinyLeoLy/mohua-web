@@ -291,6 +291,7 @@ import MhFooter from '@/components/footer.vue';
 					border-right: 1px solid #c7cfd9;
 					height: 44px;
 					line-height: 44px;
+					font-size: 16px;
 				}
 				span:last-child {
 					border-right: unset;

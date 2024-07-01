@@ -37,6 +37,7 @@ export default defineConfig({
     },
   },
   build: {
+    outDir: 'site',
     rollupOptions: {
       output: {
         chunkFileNames: 'static/js/[name]-[hash].js',

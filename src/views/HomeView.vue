@@ -1,6 +1,6 @@
 <template>
 	<div class="home-view">
-		<div class="carousel">
+		<div class="carousel board">
 			<img src="@/assets/images/home/carousel.png" alt="" />
 			<div class="title-container">
 				<div class="title">先进、真诚、团结、奋斗 让大模型走进每一家企业</div>

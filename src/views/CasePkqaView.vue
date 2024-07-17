@@ -132,6 +132,10 @@
 <script setup>
 import { ref } from 'vue';
 import MhFooter from '@/components/footer.vue';
+import { scrollIntoView } from '@/utils/hook';
+
+scrollIntoView();
+
 const list1 = ref(['财务', '能源', '教育', '政务', '金融', '制造']);
 const list2 = ref([
 	'知识图谱问答',

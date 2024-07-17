@@ -7,10 +7,12 @@
 				<div class="line"></div>
 				<p>
 					模华科技擅长利用最新的深度学习技术，开发高性能的大规模预训练模型，无
-					论在企业的业务智能化、政府的决策支持还是军队的信息化建设，都能提供定
-					制化、高效率的大模型解决方案
 				</p>
-				<div class="btn">沟通咨询</div>
+				<p>
+					论在企业的业务智能化、政府的决策支持还是军队的信息化建设，都能提供定
+				</p>
+				<p>制化、高效率的大模型解决方案。</p>
+				<div class="btn mh-btn" @click="contactService">沟通咨询</div>
 			</div>
 		</div>
 		<div class="custom">
@@ -48,46 +50,40 @@
 				</div>
 			</div>
 		</div>
-		<div class="center flex-column">
+		<div class="center flex-column" id="center">
 			<div class="title">技术支持</div>
 			<div class="center-warper flex-row">
 				<div class="item">
 					<span class="name">大模型产品培训</span>
-					<span class="des"
-						>提供国内外大模型的操作培训，在实际场景中对比效果。提供一系列免费的大模&nbsp;&nbsp;&nbsp;
-						型产品培训，包括A1写文案、AI写代码、AI画海报、AI画脑图、AI写PPT、AI搜
-						索、提示词工程等。</span
-					>
+					<div class="des">
+						提供国内外大模型的操作培训，在实际场景中对比效果。提供一系列免费的大模型产品培训，包括A1写文案、AI写代码、AI画海报、AI画脑图、AI写PPT、AI搜索、提示词工程等。
+					</div>
 					<img src="@/assets/images/solution/01.png" alt="" />
 				</div>
 				<div class="item">
 					<span class="name">免费提供大模型产品</span>
-					<span class="des"
-						>北京模华科技有限公司 自研 的知识库
-						平台、规范文本写作平台，均提供账号和使
-						用培训，也可以部署在客户私有化环境为</span
-					>
+					<div class="des">
+						北京模华科技有限公司自研的知识库平台、规范文本写作平台，均提供账号和使用培训，也可以部署在客户私有化环境。
+					</div>
 					<img src="@/assets/images/solution/02.png" alt="" />
 				</div>
 				<div class="item">
 					<span class="name">模型技术进阶培训</span>
-					<span class="des"
-						>提供大模型训练和部署框架，培训大模型原理和实战教学。重点突出大模型在企&nbsp;&nbsp;&nbsp;
-						业应用时的核心技术例如ReAct框架：LangChain和大模型的微调。</span
-					>
+					<div class="des">
+						提供大模型训练和部署框架，培训大模型原理和实战教学。重点突出大模型在企业应用时的核心技术例如ReAct框架：LangChain和大模型的微调。
+					</div>
 					<img src="@/assets/images/solution/03.png" alt="" />
 				</div>
 				<div class="item">
 					<span class="name">方案咨询</span>
-					<span class="des"
-						>全面研究同行业大模型落地经验，结合企业现状，对投入产出比进行估算，对不同
-						级别的预算可以达到的效果充分论证，协助撰写建设方案。</span
-					>
+					<div class="des">
+						全面研究同行业大模型落地经验，结合企业现状，对投入产出比进行估算，对不同级别的预算可以达到的效果充分论证，协助撰写建设方案。
+					</div>
 					<img src="@/assets/images/solution/04.png" alt="" />
 				</div>
 			</div>
 		</div>
-		<div class="service">
+		<div class="service" id="service">
 			<div class="title">免费产品和选配服务</div>
 			<div class="warper flex-row">
 				<div class="item flex-column">
@@ -134,6 +130,10 @@
 </template>
 <script setup>
 import MhFooter from '@/components/footer.vue';
+import { scrollIntoView } from '@/utils/hook';
+
+scrollIntoView();
+const contactService = () => {};
 </script>
 <style lang="scss" scoped>
 .solution-view {
@@ -184,8 +184,6 @@ import MhFooter from '@/components/footer.vue';
 			opacity: 0.3;
 		}
 		p {
-			width: 634px;
-			height: 85px;
 			font-family: PingFang SC;
 			font-weight: 500;
 			font-size: 18px;
@@ -321,7 +319,6 @@ import MhFooter from '@/components/footer.vue';
 				font-size: 16px;
 				color: #666666;
 				line-height: 1.7em;
-				white-space: pre-wrap;
 			}
 			img {
 				top: 12px;

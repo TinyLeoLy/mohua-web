@@ -1,9 +1,12 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import {
+  createRouter,
+  createWebHistory
+} from 'vue-router'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    {
+  history: createWebHistory(
+    import.meta.env.BASE_URL),
+  routes: [{
       path: '/',
       name: 'root',
       redirect: '/home'
@@ -43,8 +46,39 @@ const router = createRouter({
       name: 'case-pkqa',
       component: () => import('../views/CasePkqaView.vue')
     },
-    
+    {
+      path: '/case-twp',
+      name: 'case-twp',
+      component: () => import('../views/CasePkqaView.vue')
+    },
+    {
+      path: '/case-bpp',
+      name: 'case-bpp',
+      component: () => import('../views/CasePkqaView.vue')
+    },
+    {
+      path: '/case-bap',
+      name: 'case-bap',
+      component: () => import('../views/CasePkqaView.vue')
+    },
+    {
+      path: '/case-bsp',
+      name: 'case-bsp',
+      component: () => import('../views/CasePkqaView.vue')
+    },
   ]
 })
+
+// router.beforeEach((to, from, next) => {
+//   // console.log(to);
+//   // document.querySelector('.mh-view').scrollIntoView({ behavior: 'smooth', block: 'start' });
+//   next((v) => {
+//     console.log(v);
+//   console.log(document.querySelector('.mh-view'));
+
+//   v.scrollIntoView();
+
+//   })
+// })
 
 export default router

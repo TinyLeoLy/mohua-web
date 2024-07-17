@@ -3,7 +3,7 @@
 		<MhHeader />
 
 		<el-main class="mh-main">
-			<RouterView />
+			<RouterView class="mh-view" />
 		</el-main>
 	</el-container>
 </template>

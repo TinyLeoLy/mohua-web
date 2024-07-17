@@ -21,35 +21,53 @@
 		<div class="footer-right flex-row">
 			<div>
 				<p>产品中心</p>
-				<span>私有知识问答平台</span>
-				<span>规范文本写作平台</span>
-				<span>业务副驾驶产品</span>
-				<span>业务助手平台</span>
-				<span>业务仿真平台</span>
+				<span @click="jumpTo('case-pkqa')">私有知识问答平台</span>
+				<span @click="jumpTo('case-twp')">规范文本写作平台</span>
+				<span @click="jumpTo('case-bpp')">业务副驾驶产品</span>
+				<span @click="jumpTo('case-bap')">业务助手平台</span>
+				<span @click="jumpTo('case-bsp')">业务仿真平台</span>
 			</div>
 			<div>
 				<p>解决方案</p>
-				<span>方案咨询</span>
-				<span>专业培训</span>
-				<span>定制交付</span>
+				<span @click="jumpTo('solution', 'center')">方案咨询</span>
+				<span @click="jumpTo('solution', 'center')">专业培训</span>
+				<span @click="jumpTo('solution', 'service')">定制交付</span>
 			</div>
 			<div>
 				<p>核心技术</p>
-				<span>语言即答案</span>
-				<span>语言即文章</span>
-				<span>语言即界面</span>
-				<span>语言即成果</span>
+				<span @click="jumpTo('technology', 'center')">语言即答案</span>
+				<span @click="jumpTo('technology', 'center')">语言即文章</span>
+				<span @click="jumpTo('technology', 'center')">语言即界面</span>
+				<span @click="jumpTo('technology', 'center')">语言即成果</span>
 			</div>
 			<div>
 				<p>关于我们</p>
-				<span>公司介绍</span>
-				<span>使命愿景</span>
+				<span @click="jumpTo('aboutus', 'company')">公司介绍</span>
+				<span @click="jumpTo('aboutus', 'center')">使命愿景</span>
 			</div>
 		</div>
 	</el-footer>
 </template>
 <script setup>
 import { ref } from 'vue';
+import { useRouter, useRoute } from 'vue-router';
+
+const router = useRouter();
+const route = useRoute();
+const jumpTo = (path, hash = '') => {
+	const query = hash ? { hash } : {};
+	if (route.name === path) {
+		router.replace({
+			path,
+			query,
+		});
+	} else {
+		router.push({
+			path,
+			query,
+		});
+	}
+};
 </script>
 <style lang="scss" scoped>
 .mh-footer {
@@ -108,17 +126,15 @@ import { ref } from 'vue';
 	}
 }
 .footer-right {
-  margin-left: auto;
+	margin-left: auto;
 	div {
-    margin-right: 124px;
-		// max-width: 237px;
-		// min-width: 150px;
+		margin-right: 124px;
 		display: flex;
 		flex-direction: column;
 		font-family: PingFang SC;
 
 		p {
-      margin-bottom: 28px;
+			margin-bottom: 28px;
 			height: 25px;
 			font-weight: 500;
 			font-size: 18px;
@@ -126,19 +142,23 @@ import { ref } from 'vue';
 			line-height: 25px;
 		}
 		span {
-      margin-bottom: 21px;
+			margin-bottom: 21px;
 			height: 20px;
 			font-weight: 500;
 			font-size: 14px;
 			color: #333333;
 			line-height: 20px;
-      &:last-child {
-        margin-bottom: unset;
-      }
+			cursor: pointer;
+			&:hover {
+				color: #177cbe;
+			}
+			&:last-child {
+				margin-bottom: unset;
+			}
 		}
 	}
-  div:last-child {
-    margin-right: unset;
-  }
+	div:last-child {
+		margin-right: unset;
+	}
 }
 </style>

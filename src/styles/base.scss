@@ -29,3 +29,12 @@
   display: flex;
   flex-direction: column;
 }
+
+.mh-btn {
+  &:hover,
+  &:active {
+    color: #ffffff !important;
+    border-color: #177cbe !important;
+    background-color: #177cbe !important;
+  }
+}

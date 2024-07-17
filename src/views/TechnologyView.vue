@@ -7,13 +7,15 @@
 				<div class="line"></div>
 				<p>
 					模华科技在大模型技术生态蓬勃发展的背景下，依托自主领先的大模型技术方
-					案，潜心打造了“语言即结果”的技术架构，来辅助政府、军工、央国企等企业
-					组织直面真需求、解决真问题
 				</p>
-				<div class="btn">沟通咨询</div>
+				<p>
+					案，潜心打造了“语言即结果”的技术架构，来辅助政府、军工、央国企等企业
+				</p>
+				<p>组织直面真需求、解决真问题</p>
+				<div class="btn mh-btn" @click="contactService">沟通咨询</div>
 			</div>
 		</div>
-		<div class="center flex-column">
+		<div class="center flex-column" id="center">
 			<div class="title">技术专栏</div>
 			<div class="center-warper flex-row">
 				<div class="item">
@@ -70,11 +72,12 @@
 					:key="item.name"
 					class="keyword"
 					@mouseover="onMouseOver(item)"
+					@mouseleave="onMouseLeave(item)"
 				>
 					<span class="keyword-name">{{ item.name }}</span>
-					<!-- <span v-show="item.visible" class="keyword-bg">{{
-						item.toolTip
-					}}</span> -->
+					<Transition>
+						<span v-show="item.visible" class="keyword-bg">{{ item.toolTip }}</span>
+					</Transition>
 				</div>
 			</div>
 		</div>
@@ -84,20 +87,83 @@
 <script setup>
 import MhFooter from '@/components/footer.vue';
 import { ref } from 'vue';
+import { scrollIntoView } from '@/utils/hook';
+
+scrollIntoView();
 
 const keyWordList = ref([
-	{ name: '提示词优化算法', toolTip: '', visible: false },
-	{ name: '记忆压缩算法', toolTip: '', visible: false },
-	{ name: '结构化信息抽取算法', toolTip: '', visible: false },
-	{ name: '多模态RAG向量化算法', toolTip: '', visible: false },
-	{ name: '自研大模型', toolTip: '', visible: false },
-	{ name: '对话状态管理算法', toolTip: '', visible: false },
-	{ name: '智能体(Agent)对齐算法', toolTip: '', visible: false },
-	{ name: '函数调用(function calling)算法', toolTip: '', visible: false },
-	{ name: '智能规划和验证算法', toolTip: '', visible: false },
-	{ name: 'API检索算法', toolTip: '', visible: false },
-	{ name: '智能文本分块算法', toolTip: '', visible: false },
-	{ name: 'RAG向量化算法', toolTip: '', visible: false },
+	{
+		name: '提示词优化算法',
+		toolTip:
+			'当用户的提示词中包含了多个指令，或需要多次触发查询时，模华科技的提示词优化算法会自动分解为多个子问题，并逐个执行。',
+		visible: false,
+	},
+	{
+		name: '记忆压缩算法',
+		toolTip:
+			'为了保留用户和系统的对话历史记忆，使大模型关注到多轮问答之前的上下文，模华科技的压缩算法会对长期和短期的对话记忆进行压缩处理。',
+		visible: false,
+	},
+	{
+		name: '结构化信息抽取算法',
+		toolTip:
+			'传统的信息抽取（例如实体识别、关系抽取）方法往往基于规则，或需要大量的人工标注数据进行模型训练。模华科技在大模型的基础上封装了三种提取模式：基于格式模版、基于JSON和基于提示词。在这三种模式的支撑下，信息抽取不再需要大量的人工规则和人工标注，只需要少量样本甚至零样本就可以解决结构化信息抽取问题。',
+		visible: false,
+	},
+	{
+		name: '多模态RAG向量化算法',
+		toolTip:
+			'模华科技的多模态RAG是文本RAG的进阶算法，它能从各种文档和图像中高效提取和处理数据。它无缝处理表单、发票、收据和其他非结构化数据源。',
+		visible: false,
+	},
+	{
+		name: '自研大模型',
+		toolTip:
+			'模华科技为function calling和Agent专门训练了一个大模型“奇遇”，用于提升在企业私有场景下的准确率。奇遇大模型基于LLaMA-3-8B，在5万多个现实世界的APIs上进行了训练，训练过程涵盖了预训练、指令微调和基于人类反馈的强化学习。在企业应用过程中，只需要再进行微调即可达到高准确率。',
+		visible: false,
+	},
+	{
+		name: '对话状态管理算法',
+		toolTip:
+			'模华科技的对话状态管理算法会在遇到歧义时向用户发起澄清，主动让用户提供更多信息，避免生成幻觉答案。',
+		visible: false,
+	},
+	{
+		name: '智能体(Agent)对齐算法',
+		toolTip:
+			'模华科技采用先进的AgentTuning方法，使用少量真实的业务数据进行训练，就可以显著激发大模型的Agent能力。',
+		visible: false,
+	},
+	{
+		name: '函数调用(function calling)算法',
+		toolTip:
+			'基于LLaMA*系列和Qwen*系列大模型，模华科技在5万余个现实世界的API上进行了指令微调，实现了业界领先的函数调用效果。',
+		visible: false,
+	},
+	{
+		name: '智能规划和验证算法',
+		toolTip:
+			'模华科技自研了一套智能规划和验证算法，在大模型处理复杂业务问题时，自动化地拆分成一个个可执行步骤，并自动验证每一步的输出是否符合预期。',
+		visible: false,
+	},
+	{
+		name: 'API检索算法',
+		toolTip:
+			'企业内部的API数量往往数以万计，模华科技定制了API存储和检索算法。在每次用户下达指令时，自动底筛选最匹配的TopN个APIs。',
+		visible: false,
+	},
+	{
+		name: '智能文本分块算法',
+		toolTip:
+			'针对企业内部材料种类繁多、格式不一的问题，模华科技针对Markdown、Latex、JSON等主流格式定制了结构分块算法，大大提升企业内部知识问答的效果。',
+		visible: false,
+	},
+	{
+		name: 'RAG向量化算法',
+		toolTip:
+			'基于向量化算法，可以支撑无限长度的上下文输入。通过上传文件就可以将企业内部所有材料作为大模型背后的知识。',
+		visible: false,
+	},
 ]);
 
 const keywordHoverStr = ref('');
@@ -108,6 +174,11 @@ const onMouseOver = (item) => {
 	});
 	item.visible = true;
 };
+const onMouseLeave = (item) => {
+	item.visible = false;
+};
+
+const contactService = () => {};
 </script>
 <style lang="scss" scoped>
 .technology-view {
@@ -157,14 +228,11 @@ const onMouseOver = (item) => {
 			opacity: 0.3;
 		}
 		p {
-			width: 646px;
-			height: 85px;
 			font-family: PingFang SC;
 			font-weight: 500;
 			font-size: 18px;
 			color: #177cbe;
 			line-height: 1.5em;
-			// white-space: pre-wrap;
 		}
 	}
 	.center {
@@ -273,6 +341,21 @@ const onMouseOver = (item) => {
 				color: #333333;
 				line-height: 22px;
 				cursor: pointer;
+				.keyword-bg {
+					position: absolute;
+					display: inline-block;
+					background-image: url(@/assets/images/technology/chart.png);
+					padding: 10px;
+					width: 267px;
+					height: 78px;
+					background-size: 267px 78px;
+					left: 20px;
+					top: -80px;
+					z-index: 1;
+					font-family: PingFang SC;
+					font-size: 12px;
+					line-height: 1.3em;
+				}
 				&:nth-of-type(1) {
 					top: 6px;
 					left: 236px;
@@ -280,18 +363,38 @@ const onMouseOver = (item) => {
 				&:nth-of-type(2) {
 					top: 118px;
 					left: 115px;
+					.keyword-bg {
+						top: -96px;
+						background-size: 267px 94px;
+						height: 94px;
+					}
 				}
 				&:nth-of-type(3) {
 					top: 230px;
 					left: 34px;
+					.keyword-bg {
+						top: -166px;
+						background-size: 267px 168px;
+						height: 168px;
+					}
 				}
 				&:nth-of-type(4) {
 					top: 342px;
 					left: 36px;
+					.keyword-bg {
+						top: -96px;
+						background-size: 267px 94px;
+						height: 94px;
+					}
 				}
 				&:nth-of-type(5) {
 					top: 454px;
 					left: 230px;
+					.keyword-bg {
+						top: -152px;
+						background-size: 267px 152px;
+						height: 152px;
+					}
 				}
 				&:nth-of-type(6) {
 					top: 483px;
@@ -308,6 +411,11 @@ const onMouseOver = (item) => {
 				&:nth-of-type(9) {
 					top: 229px;
 					right: 30px;
+					.keyword-bg {
+						top: -96px;
+						background-size: 267px 94px;
+						height: 94px;
+					}
 				}
 				&:nth-of-type(10) {
 					top: 148px;
@@ -316,23 +424,27 @@ const onMouseOver = (item) => {
 				&:nth-of-type(11) {
 					top: 67px;
 					right: 122px;
+					.keyword-bg {
+						top: -96px;
+						background-size: 267px 94px;
+						height: 94px;
+					}
 				}
 				&:nth-of-type(12) {
 					top: 3px;
 					right: 246px;
 				}
 			}
-			.keyword-bg {
-				position: absolute;
-				display: inline-block;
-				background-image: url(@/assets/images/technology/chart.png);
-				width: 267px;
-				height: 78px;
-				background-size: 267px 78px;
-				transform: translate(-50%, -100%);
-				z-index: 1;
-			}
 		}
+	}
+	.v-enter-active,
+	.v-leave-active {
+		transition: opacity 0.5s ease;
+	}
+
+	.v-enter-from,
+	.v-leave-to {
+		opacity: 0;
 	}
 }
 </style>

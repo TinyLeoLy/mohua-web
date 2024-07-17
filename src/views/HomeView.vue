@@ -1,18 +1,22 @@
 <template>
 	<div class="home-view">
-		<div class="carousel">
+		<div class="carousel" id="carousel">
 			<img src="@/assets/images/home/carousel.png" alt="" />
 			<div class="title-container">
-				<div class="title">先进、真诚、团结、奋斗 让大模型走进每一家企业</div>
+				<div class="title">让大模型走进每一家企业</div>
 				<div class="deliver-line"></div>
 				<div class="desc">
-					模华科技是企业大模型综合解决方案先行者，致力于以智能、高效、灵活、准确、全
-					面的人工智能大模型技术，为客户提供最优质、最具价值的人工智能解决方案
+					<p>
+						模华科技是企业大模型综合解决方案先行者，致力于以智能、高效、灵活、准确、全
+					</p>
+					<p>
+						面的人工智能大模型技术，为客户提供最优质、最具价值的人工智能解决方案
+					</p>
 				</div>
-				<div class="btn">探索更多</div>
+				<div class="btn mh-btn" @click="contactService">探索更多</div>
 			</div>
 		</div>
-		<div class="company flex-row">
+		<div class="company flex-row" id="company">
 			<img src="@/assets/images/home/company.png" alt="" />
 			<div class="title-container flex-column">
 				<div class="title">企业简介</div>
@@ -24,10 +28,10 @@
 					员工助手平台Agents以及业务仿真平台Multi-Agents等，<br />
 					我们注重与客户的紧密合作，倾听客户需求，深入了解行业特点，为客户量身定制符合实际需求的解决方案。<br />
 				</div>
-				<div class="btn">探索更多</div>
+				<div class="btn mh-btn" @click="jumpTo('aboutus')">探索更多</div>
 			</div>
 		</div>
-		<div class="product flex-column">
+		<div class="product flex-column" id="product">
 			<div class="title">产品体系</div>
 			<div class="system-box flex-row">
 				<div class="system flex-column">
@@ -60,32 +64,32 @@
 				</div>
 			</div>
 		</div>
-		<div class="center">
+		<div class="center" id="center">
 			<div class="title">产品中心</div>
 			<div class="center-box flex-row">
-				<div class="item">
+				<div class="item" @click="jumpTo('case-pkqa')">
 					<img src="@/assets/images/home/c_01.png" alt="" />
 					<div class="name">私有知识问答平台</div>
 				</div>
-				<div class="item">
+				<div class="item" @click="jumpTo('case-twp')">
 					<img src="@/assets/images/home/c_02.png" alt="" />
 					<div class="name">规范文本写作平台</div>
 				</div>
-				<div class="item">
+				<div class="item" @click="jumpTo('case-bpp')">
 					<img src="@/assets/images/home/c_03.png" alt="" />
 					<div class="name">业务副驾驶产品</div>
 				</div>
-				<div class="item">
+				<div class="item" @click="jumpTo('case-bap')">
 					<img src="@/assets/images/home/c_04.png" alt="" />
 					<div class="name">业务助手平台</div>
 				</div>
-				<div class="item">
+				<div class="item" @click="jumpTo('case-bsp')">
 					<img src="@/assets/images/home/c_05.png" alt="" />
 					<div class="name">业务仿真平台</div>
 				</div>
 			</div>
 		</div>
-		<div class="solution">
+		<div class="solution" id="solution">
 			<div class="title">解决方案</div>
 			<div class="center-box">
 				<img src="@/assets/images/home/solution.png" alt="" />
@@ -94,7 +98,7 @@
 				<div class="tag">专业培训</div>
 			</div>
 		</div>
-		<div class="case">
+		<div class="case" id="case">
 			<div class="title">案例中心</div>
 			<div class="case-box flex-row">
 				<div class="item flex-column">
@@ -110,13 +114,27 @@
 					<span class="name">员工助手案例</span>
 				</div>
 			</div>
-			<div class="button">探索更多</div>
+			<div class="button mh-btn" @click="jumpTo('case')">探索更多</div>
 		</div>
-    <MhFooter />
+		<MhFooter />
 	</div>
 </template>
 <script setup>
 import MhFooter from '@/components/footer.vue';
+import { onMounted } from 'vue';
+import { useRouter } from 'vue-router';
+import { scrollIntoView } from '@/utils/hook';
+import { scrollIntoView } from '@/utils/hook';
+
+scrollIntoView();
+const contactService = () => {};
+
+const router = useRouter();
+const jumpTo = (name) => {
+	router.push({ name });
+};
+
+scrollIntoView();
 </script>
 <style lang="scss" scoped>
 @mixin btn() {
@@ -145,11 +163,11 @@ import MhFooter from '@/components/footer.vue';
 			left: 270px;
 		}
 		.title {
-			width: 528px;
-			height: 134px;
+			// width: 528px;
+			// height: 134px;
 			font-family: PingFang SC;
 			font-weight: bold;
-			font-size: 48px;
+			font-size: 50px;
 			color: #177cbe;
 			line-height: 1.5em;
 			text-align: left;
@@ -164,12 +182,14 @@ import MhFooter from '@/components/footer.vue';
 		.desc {
 			width: 666px;
 			height: 50px;
-			font-family: PingFang SC;
-			font-weight: 500;
-			font-size: 18px;
-			color: #177cbe;
-			line-height: 1.5em;
-			text-align: left;
+			p {
+				font-family: PingFang SC;
+				font-weight: 500;
+				font-size: 18px;
+				color: #177cbe;
+				line-height: 1.5em;
+				text-align: left;
+			}
 		}
 		.btn {
 			margin-top: 100px;
@@ -190,22 +210,22 @@ import MhFooter from '@/components/footer.vue';
 			position: absolute;
 			top: 52px;
 			.title {
-				width: 144px;
+				// width: 144px;
 				height: 50px;
 				font-family: PingFang SC;
 				font-weight: bold;
-				font-size: 36px;
+				font-size: 40px;
 				color: #ffffff;
 				line-height: 50px;
 				text-align: center;
 			}
 			.desc {
 				margin-top: 67px;
-				width: 768px;
+				// width: 768px;
 				height: 152px;
 				font-family: PingFang SC;
 				font-weight: 500;
-				font-size: 16px;
+				font-size: 18px;
 				color: #ffffff;
 				line-height: 1.5em;
 				text-align: center;
@@ -287,10 +307,11 @@ import MhFooter from '@/components/footer.vue';
 				box-sizing: border-box;
 				span {
 					display: inline-block;
-					padding: 0 20px;
+					padding: 0 18px;
 					border-right: 1px solid #c7cfd9;
 					height: 44px;
 					line-height: 44px;
+					font-size: 18px;
 				}
 				span:last-child {
 					border-right: unset;
@@ -301,7 +322,7 @@ import MhFooter from '@/components/footer.vue';
 				margin-right: unset;
 				.tag-box {
 					span {
-						padding: 0 38px;
+						padding: 0 36px;
 					}
 				}
 			}
@@ -332,6 +353,7 @@ import MhFooter from '@/components/footer.vue';
 				width: 298px;
 				height: 100%;
 				border-right: 1px solid rgba(0, 0, 0, 0.2);
+				cursor: pointer;
 				&:last-child {
 					border-right: unset;
 				}
@@ -348,6 +370,15 @@ import MhFooter from '@/components/footer.vue';
 				font-size: 16px;
 				color: #333333;
 				line-height: 22px;
+			}
+			.item:hover {
+				img {
+					transform: scale(1.2);
+					transition: 0.8s all;
+				}
+				.name {
+					color: #177cbe;
+				}
 			}
 		}
 	}

@@ -9,6 +9,19 @@
 </template>
 <script setup>
 import MhHeader from '@/components/header.vue';
+import { useRoute } from 'vue-router';
+import { onMounted, ref, watch } from 'vue';
+
+const route = useRoute();
+onMounted(() => {
+	watch(
+		() => route.name,
+		() => {
+			const dom = document.querySelector('.board');
+			dom?.scrollIntoView();
+		}
+	);
+});
 </script>
 <style lang="scss" scoped>
 .mh-container {

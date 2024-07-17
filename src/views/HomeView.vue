@@ -1,6 +1,10 @@
 <template>
 	<div class="home-view">
+<<<<<<< HEAD
 		<div class="carousel" id="carousel">
+=======
+		<div class="carousel board">
+>>>>>>> 9ee9d95bc00c92fc2482f7b1525b118e3b61b427
 			<img src="@/assets/images/home/carousel.png" alt="" />
 			<div class="title-container">
 				<div class="title">让大模型走进每一家企业</div>
@@ -123,7 +127,6 @@
 import MhFooter from '@/components/footer.vue';
 import { onMounted } from 'vue';
 import { useRouter } from 'vue-router';
-import { scrollIntoView } from '@/utils/hook';
 import { scrollIntoView } from '@/utils/hook';
 
 scrollIntoView();

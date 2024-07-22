@@ -3,16 +3,16 @@
 		<img
 			class="logo"
 			src="@/assets/images/home/logo.png"
-			@click="jumpTo('/')"
+			@click="jumpTo('home')"
 		/>
 		<div class="nav">
 			<span
-				:class="['nav-item', currentRouteName === nav.key ? 'is-active' : '']"
+				:class="['nav-item', getRouteActive(nav.name) ? 'is-active' : '']"
 				v-for="nav in navList"
 				:key="nav.name"
-				@click="jumpTo(nav.path)"
+				@click="jumpTo(nav.name)"
 			>
-				{{ nav.name }}
+				{{ nav.label }}
 			</span>
 		</div>
 	</el-header>
@@ -22,18 +22,30 @@ import { computed, reactive } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 
 const navList = reactive([
-	{ name: '关于我们', path: '/aboutus', key: 'aboutus' },
-	{ name: '核心技术', path: '/technology', key: 'technology' },
-	{ name: '产品中心', path: '/product', key: 'product' },
-	{ name: '解决方案', path: '/solution', key: 'solution' },
-	{ name: '案例中心', path: '/case', key: 'case' },
+	{ label: '关于我们', name: 'aboutus' },
+	{ label: '核心技术', name: 'technology' },
+	{ label: '产品中心', name: 'product' },
+	{ label: '解决方案', name: 'solution' },
+	{ label: '案例中心', name: 'case' },
 ]);
 const router = useRouter();
-const jumpTo = (path) => {
-	router.push({ path });
+
+const jumpTo = (name) => {
+	router.push({ name });
 };
 const route = useRoute();
-const currentRouteName = computed(() => route.name);
+
+const getRouteActive = (currentRouteName) => {
+	const routeName = route.name ?? '';
+	if (routeName.indexOf('product') !== -1 && currentRouteName === 'product') {
+		return true;
+	}
+	if (routeName === currentRouteName) {
+		return true;
+	}
+
+	return false;
+};
 </script>
 <style lang="scss" scoped>
 .mh-header {

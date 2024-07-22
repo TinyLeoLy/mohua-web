@@ -42,43 +42,31 @@ const router = createRouter({
       component: () => import('../views/CaseView.vue')
     },
     {
-      path: '/case-pkqa',
-      name: 'case-pkqa',
-      component: () => import('../views/CasePkqaView.vue')
+      path: '/product-pkqa',
+      name: 'product-pkqa',
+      component: () => import('../views/ProductPkqaView.vue')
     },
     {
-      path: '/case-twp',
-      name: 'case-twp',
-      component: () => import('../views/CasePkqaView.vue')
+      path: '/product-twp',
+      name: 'product-twp',
+      component: () => import('../views/ProductTwpView.vue')
     },
     {
-      path: '/case-bpp',
-      name: 'case-bpp',
-      component: () => import('../views/CasePkqaView.vue')
+      path: '/product-bpp',
+      name: 'product-bpp',
+      component: () => import('../views/ProductBppView.vue')
     },
     {
-      path: '/case-bap',
-      name: 'case-bap',
-      component: () => import('../views/CasePkqaView.vue')
+      path: '/product-bap',
+      name: 'product-bap',
+      component: () => import('../views/ProductBapView.vue')
     },
     {
-      path: '/case-bsp',
-      name: 'case-bsp',
-      component: () => import('../views/CasePkqaView.vue')
+      path: '/product-bsp',
+      name: 'product-bsp',
+      component: () => import('../views/ProductBspView.vue')
     },
   ]
 })
-
-// router.beforeEach((to, from, next) => {
-//   // console.log(to);
-//   // document.querySelector('.mh-view').scrollIntoView({ behavior: 'smooth', block: 'start' });
-//   next((v) => {
-//     console.log(v);
-//   console.log(document.querySelector('.mh-view'));
-
-//   v.scrollIntoView();
-
-//   })
-// })
 
 export default router

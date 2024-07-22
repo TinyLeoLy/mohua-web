@@ -1,15 +1,12 @@
 <template>
-	<div class="case-view">
+	<div class="product-view">
 		<div class="board">
-			<img src="@/assets/images/case/pkqa/bg.png" alt="" />
+			<img src="@/assets/images/product/common/bg.png" alt="" />
 			<div class="left">
 				<div class="title">私有知识问答平台</div>
 				<div class="line"></div>
-				<p>
-					结合先进的大语言模型技术，轻松识别各种文档，自动生成专属知识库，
-					带来知识归纳、构建、问答、推荐等体验，帮助用户提升工作效率。
-				</p>
-				<div class="btn">沟通咨询</div>
+				<p>结合先进的大语言模型技术，轻松识别各种文档，自动生成专属知识库，带来知识归纳、构建、问答、推荐等体验，帮助用户提升工作效率。</p>
+				<div class="btn mh-btn" @click="contactService">沟通咨询</div>
 			</div>
 		</div>
 
@@ -18,7 +15,7 @@
 			<div class="structure-box flex-column">
 				<div class="structure-item flex-row">
 					<div class="left">
-						<img src="@/assets/images/case/pkqa/pie.png" alt="" />
+						<img src="@/assets/images/product/pkqa/pie.png" alt="" />
 						<div class="name">应用层</div>
 					</div>
 					<div class="right flex-row">
@@ -27,7 +24,7 @@
 				</div>
 				<div class="structure-item flex-row">
 					<div class="left">
-						<img src="@/assets/images/case/pkqa/pie.png" alt="" />
+						<img src="@/assets/images/product/pkqa/pie.png" alt="" />
 						<div class="name">功能层</div>
 					</div>
 					<div class="right flex-row">
@@ -36,7 +33,7 @@
 				</div>
 				<div class="structure-item flex-row">
 					<div class="left">
-						<img src="@/assets/images/case/pkqa/pie.png" alt="" />
+						<img src="@/assets/images/product/pkqa/pie.png" alt="" />
 						<div class="name">模型层</div>
 					</div>
 					<div class="right flex-row">
@@ -45,7 +42,7 @@
 				</div>
 				<div class="structure-item flex-row">
 					<div class="left">
-						<img src="@/assets/images/case/pkqa/pie.png" alt="" />
+						<img src="@/assets/images/product/pkqa/pie.png" alt="" />
 						<div class="name">组件层</div>
 					</div>
 					<div class="right flex-row">
@@ -60,35 +57,35 @@
 			<div class="center-warper flex-row">
 				<div class="item">
 					<span class="name">知识建库</span>
-					<span class="des"
-						>提供智能化管理能力，支持多格式知识文档上传、自动向量化生成统一的面向
-						全域非结构化数据处理的AI知识库。</span
-					>
-					<img src="@/assets/images/case/pkqa/01.png" alt="" />
+					<div class="des">
+						<p>提供智能化管理能力，支持多格式知识文档上传、自动向量化生成统一的面向</p>
+						<p>全域非结构化数据处理的AI知识库。</p>
+					</div>
+					<img src="@/assets/images/product/common/01.png" alt="" />
 				</div>
 				<div class="item">
 					<span class="name">知识总结</span>
-					<span class="des"
-						>精确快速地从非结构化文本中进行知识抽取，构建领域知识图谱，可对用户给
-						出的信息进行归类，准确总结长文本摘要。</span
-					>
-					<img src="@/assets/images/case/pkqa/02.png" alt="" />
+					<div class="des">
+						<p>精确快速地从非结构化文本中进行知识抽取，构建领域知识图谱，可对用户给</p>
+						<p>出的信息进行归类，准确总结长文本摘要。</p>
+					</div>
+					<img src="@/assets/images/product/common/02.png" alt="" />
 				</div>
 				<div class="item">
 					<span class="name">智能搜索</span>
-					<span class="des"
-						>理解用户提出的问题并准确抽取关键信息，基于上下文理解能力，平台可以提
-						供智能搜索功能，根据用户提出的问题和上下文信息，准确匹配相关内容。</span
-					>
-					<img src="@/assets/images/case/pkqa/03.png" alt="" />
+					<div class="des">
+						<p>理解用户提出的问题并准确抽取关键信息，基于上下文理解能力，平台可以提</p>
+						<p>供智能搜索功能，根据用户提出的问题和上下文信息，准确匹配相关内容。</p>
+					</div>
+					<img src="@/assets/images/product/common/03.png" alt="" />
 				</div>
 				<div class="item">
 					<span class="name">集成扩展</span>
-					<span class="des"
-						>提供与其他系统的集成能力，或外部服务的集成，以及具有一定的扩展性，支持
-						定制化需求和功能扩展。</span
-					>
-					<img src="@/assets/images/case/pkqa/04.png" alt="" />
+					<div class="des">
+						<p>提供与其他系统的集成能力，或外部服务的集成，以及具有一定的扩展性，支持</p>
+						<p>定制化需求和功能扩展。</p>
+					</div>
+					<img src="@/assets/images/product/common/04.png" alt="" />
 				</div>
 			</div>
 		</div>
@@ -135,6 +132,7 @@ import MhFooter from '@/components/footer.vue';
 import { scrollIntoView } from '@/utils/hook';
 
 scrollIntoView();
+const contactService = () => {};
 
 const list1 = ref(['财务', '能源', '教育', '政务', '金融', '制造']);
 const list2 = ref([
@@ -171,7 +169,7 @@ const list4 = ref([
 ]);
 </script>
 <style lang="scss" scoped>
-.case-view {
+.product-view {
 	font-family: PingFang SC;
 	.board {
 		position: relative;
@@ -240,8 +238,8 @@ const list4 = ref([
 			text-align: center;
 		}
 		.structure-box {
-      justify-content: center;
-      align-items: center;
+			justify-content: center;
+			align-items: center;
 		}
 		.structure-item {
 			margin-bottom: 35px;
@@ -267,7 +265,7 @@ const list4 = ref([
 			.right {
 				flex-wrap: wrap;
 				align-items: center;
-        align-content: space-evenly;
+				align-content: space-evenly;
 				margin-left: 38px;
 				padding: 0 48px;
 				width: 1188px;
@@ -277,7 +275,7 @@ const list4 = ref([
 				border: 1px solid rgba(47, 78, 107, 0.5);
 				span {
 					display: block;
-          margin-right: 23px;
+					margin-right: 23px;
 					width: 162px;
 					height: 70px;
 					background: #ffffff;
@@ -289,20 +287,20 @@ const list4 = ref([
 					line-height: 68px;
 					text-align: center;
 				}
-        span:nth-child(6),
-        span:nth-child(12) {
-          margin-right: unset;
-        }
+				span:nth-child(6),
+				span:nth-child(12) {
+					margin-right: unset;
+				}
 			}
 		}
-    .structure-item:nth-child(2n) {
-      .right {
-        span {
-          height: 51px;
-          line-height: 49px;
-        }
-      }
-    }
+		.structure-item:nth-child(2n) {
+			.right {
+				span {
+					height: 51px;
+					line-height: 49px;
+				}
+			}
+		}
 		.structure-item:last-child {
 			margin-bottom: 10px;
 		}

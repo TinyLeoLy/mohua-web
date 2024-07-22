@@ -1,5 +1,5 @@
 <template>
-	<div class="case-view">
+	<div class="product-view">
 		<div class="board">
 			<img src="@/assets/images/case/bg.png" alt="" />
 			<div class="left">
@@ -15,14 +15,14 @@
 				<div class="btn mh-btn" @click="contactService">沟通咨询</div>
 			</div>
 		</div>
-		<div class="case-content flex-column">
-			<div class="case-item">
+		<div class="product-content flex-column">
+			<div class="product-item">
 				<div class="title flex-row">
 					<img src="@/assets/images/case/dot.png" alt="" />
 					<span>模型训练和部署典型案例</span>
 				</div>
-				<div class="case-item-warper flex-row">
-					<img class="case-img" src="@/assets/images/case/01.png" alt="" />
+				<div class="product-item-warper flex-row">
+					<img class="product-img" src="@/assets/images/case/01.png" alt="" />
 
 					<div class="desc-box flex-column">
 						<div class="name">农业农村部大模型</div>
@@ -37,12 +37,12 @@
 					</div>
 				</div>
 			</div>
-			<div class="case-item">
+			<div class="product-item">
 				<div class="title flex-row">
 					<img src="@/assets/images/case/dot.png" alt="" />
 					<span>私有知识问答案例</span>
 				</div>
-				<div class="case-item-warper flex-row">
+				<div class="product-item-warper flex-row">
 					<div class="desc-box flex-column">
 						<div class="name">某研究院私有知识问答平台</div>
 						<img src="@/assets/images/case/line.png" alt="" />
@@ -52,16 +52,16 @@
 							<p>等。</p>
 						</div>
 					</div>
-					<img class="case-img" src="@/assets/images/case/02.png" alt="" />
+					<img class="product-img" src="@/assets/images/case/02.png" alt="" />
 				</div>
 			</div>
-			<div class="case-item">
+			<div class="product-item">
 				<div class="title flex-row">
 					<img src="@/assets/images/case/dot.png" alt="" />
 					<span>业务副驾驶案例</span>
 				</div>
-				<div class="case-item-warper flex-row">
-					<img class="case-img" src="@/assets/images/case/03.png" alt="" />
+				<div class="product-item-warper flex-row">
+					<img class="product-img" src="@/assets/images/case/03.png" alt="" />
 
 					<div class="desc-box flex-column">
 						<div class="name">某研究院作战仿真系统</div>
@@ -74,12 +74,12 @@
 					</div>
 				</div>
 			</div>
-			<div class="case-item">
+			<div class="product-item">
 				<div class="title flex-row">
 					<img src="@/assets/images/case/dot.png" alt="" />
 					<span>员工助手案例</span>
 				</div>
-				<div class="case-item-warper flex-row">
+				<div class="product-item-warper flex-row">
 					<div class="desc-box flex-column">
 						<div class="name">水利部信息中心大模型</div>
 						<img src="@/assets/images/case/line.png" alt="" />
@@ -89,7 +89,7 @@
 							<p>湖污染严重根因，结合污染治理知识体系，给出针对性的污染治理方案。</p>
 						</div>
 					</div>
-					<img class="case-img" src="@/assets/images/case/04.png" alt="" />
+					<img class="product-img" src="@/assets/images/case/04.png" alt="" />
 				</div>
 			</div>
 		</div>
@@ -104,7 +104,7 @@ scrollIntoView();
 const contactService = () => {};
 </script>
 <style lang="scss" scoped>
-.case-view {
+.product-view {
 	font-family: PingFang SC;
 	.board {
 		position: relative;
@@ -159,12 +159,12 @@ const contactService = () => {};
 			line-height: 1.5em;
 		}
 	}
-	.case-content {
+	.product-content {
 		align-items: center;
 		padding-top: 54px;
 		padding-bottom: 61px;
 	}
-	.case-item {
+	.product-item {
 		margin-bottom: 80px;
 		width: 1380px;
 		.title {
@@ -183,10 +183,10 @@ const contactService = () => {};
 				color: #333333;
 			}
 		}
-		.case-item-warper {
+		.product-item-warper {
 			justify-content: space-between;
 		}
-		.case-img {
+		.product-img {
 			width: 633px;
 			height: 370px;
 			background: #f1f7fe;
@@ -215,7 +215,7 @@ const contactService = () => {};
 			}
 		}
 	}
-	.case-item:last-child {
+	.product-item:last-child {
 		margin-bottom: unset;
 	}
 }

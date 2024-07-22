@@ -21,11 +21,11 @@
 		<div class="footer-right flex-row">
 			<div>
 				<p>产品中心</p>
-				<span @click="jumpTo('case-pkqa')">私有知识问答平台</span>
-				<span @click="jumpTo('case-twp')">规范文本写作平台</span>
-				<span @click="jumpTo('case-bpp')">业务副驾驶产品</span>
-				<span @click="jumpTo('case-bap')">业务助手平台</span>
-				<span @click="jumpTo('case-bsp')">业务仿真平台</span>
+				<span @click="jumpTo('product-pkqa')">私有知识问答平台</span>
+				<span @click="jumpTo('product-twp')">规范文本写作平台</span>
+				<span @click="jumpTo('product-bpp')">业务副驾驶产品</span>
+				<span @click="jumpTo('product-bap')">员工助手平台</span>
+				<span @click="jumpTo('product-bsp')">业务仿真平台</span>
 			</div>
 			<div>
 				<p>解决方案</p>

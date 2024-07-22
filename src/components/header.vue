@@ -18,7 +18,7 @@
 	</el-header>
 </template>
 <script setup>
-import { computed, reactive, ref } from 'vue';
+import { computed, reactive } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 
 const navList = reactive([

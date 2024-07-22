@@ -15,7 +15,7 @@
 		</div>
 
 		<div class="product-list">
-			<div class="product-item flex-row" @click="jumpTo('case-pkqa')">
+			<div class="product-item flex-row" @click="jumpTo('product-pkqa')">
 				<div class="desc-warp flex-column">
 					<div class="title">私有知识问答平台</div>
 					<div class="line"></div>
@@ -23,11 +23,11 @@
 						结合先进的大语言模型技术，轻松识别各种文档，自动生成专属知识库，
 						带来知识归纳、构建、问答、推荐等体验，帮助用户提升工作效率。
 					</p>
-					<div class="btn mh-btn" @click="jumpTo('case-pkqa')">探索更多</div>
+					<div class="btn mh-btn" @click="jumpTo('product-pkqa')">探索更多</div>
 				</div>
 				<img src="@/assets/images/product/01.png" alt="" />
 			</div>
-			<div class="product-item flex-row" @click="jumpTo('case-twp')">
+			<div class="product-item flex-row" @click="jumpTo('product-twp')">
 				<img src="@/assets/images/product/02.png" alt="" />
 				<div class="desc-warp flex-column">
 					<div class="title">规范文本写作平台</div>
@@ -37,10 +37,10 @@
 						速生成高质量的文本内容，拓展了创作的可能性，提升效率，满足多样化
 						的写作需求。
 					</p>
-					<div class="btn mh-btn" @click="jumpTo('case-twp')">探索更多</div>
+					<div class="btn mh-btn" @click="jumpTo('product-twp')">探索更多</div>
 				</div>
 			</div>
-			<div class="product-item flex-row" @click="jumpTo('case-bpp')">
+			<div class="product-item flex-row" @click="jumpTo('product-bpp')">
 				<div class="desc-warp flex-column">
 					<div class="title">业务副驾驶产品 Copilot</div>
 					<div class="line"></div>
@@ -51,11 +51,11 @@
 						避免了重复跳转的问题，更有针对性地聚焦于用户当前的任务，使得交互更加
 						流畅、高效。
 					</p>
-					<div class="btn mh-btn" @click="jumpTo('case-bpp')">探索更多</div>
+					<div class="btn mh-btn" @click="jumpTo('product-bpp')">探索更多</div>
 				</div>
 				<img src="@/assets/images/product/03.png" alt="" />
 			</div>
-			<div class="product-item flex-row" @click="jumpTo('case-bap')">
+			<div class="product-item flex-row" @click="jumpTo('product-bap')">
 				<img src="@/assets/images/product/04.png" alt="" />
 				<div class="desc-warp flex-column">
 					<div class="title">员工助手平台 Agents</div>
@@ -67,10 +67,10 @@
 						由Agents来完成，员工下达指令就可以完成操作，人工操作和决策的效率
 						可以提高50%以上。
 					</p>
-					<div class="btn mh-btn" @click="jumpTo('case-bap')">探索更多</div>
+					<div class="btn mh-btn" @click="jumpTo('product-bap')">探索更多</div>
 				</div>
 			</div>
-			<div class="product-item flex-row" @click="jumpTo('case-bsp')">
+			<div class="product-item flex-row" @click="jumpTo('product-bsp')">
 				<div class="desc-warp flex-column">
 					<div class="title">业务仿真平台 Multi-Agents</div>
 					<div class="line"></div>
@@ -80,7 +80,7 @@
 						决策的蓝方目标。同时，面向需要多工种协作来达成目标的复杂场景时，
 						Multi-Agents平台可以扮演多个角色，启发式地输出一系列业务仿真结 果。
 					</p>
-					<div class="btn mh-btn" @click="jumpTo('case-bsp')">探索更多</div>
+					<div class="btn mh-btn" @click="jumpTo('product-bsp')">探索更多</div>
 				</div>
 				<img src="@/assets/images/product/05.png" alt="" />
 			</div>

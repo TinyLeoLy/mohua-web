@@ -67,23 +67,23 @@
 		<div class="center" id="center">
 			<div class="title">产品中心</div>
 			<div class="center-box flex-row">
-				<div class="item" @click="jumpTo('case-pkqa')">
+				<div class="item" @click="jumpTo('product-pkqa')">
 					<img src="@/assets/images/home/c_01.png" alt="" />
 					<div class="name">私有知识问答平台</div>
 				</div>
-				<div class="item" @click="jumpTo('case-twp')">
+				<div class="item" @click="jumpTo('product-twp')">
 					<img src="@/assets/images/home/c_02.png" alt="" />
 					<div class="name">规范文本写作平台</div>
 				</div>
-				<div class="item" @click="jumpTo('case-bpp')">
+				<div class="item" @click="jumpTo('product-bpp')">
 					<img src="@/assets/images/home/c_03.png" alt="" />
 					<div class="name">业务副驾驶产品</div>
 				</div>
-				<div class="item" @click="jumpTo('case-bap')">
+				<div class="item" @click="jumpTo('product-bap')">
 					<img src="@/assets/images/home/c_04.png" alt="" />
 					<div class="name">业务助手平台</div>
 				</div>
-				<div class="item" @click="jumpTo('case-bsp')">
+				<div class="item" @click="jumpTo('product-bsp')">
 					<img src="@/assets/images/home/c_05.png" alt="" />
 					<div class="name">业务仿真平台</div>
 				</div>
@@ -100,7 +100,7 @@
 		</div>
 		<div class="case" id="case">
 			<div class="title">案例中心</div>
-			<div class="case-box flex-row">
+			<div class="product-box flex-row">
 				<div class="item flex-column">
 					<img src="@/assets/images/home/case_01.png" alt="" />
 					<span class="name">模型训练和部署典型案例</span>
@@ -451,7 +451,7 @@ scrollIntoView();
 			line-height: 50px;
 			text-align: center;
 		}
-		.case-box {
+		.product-box {
 			justify-content: center;
 			margin-top: 58px;
 			.item {

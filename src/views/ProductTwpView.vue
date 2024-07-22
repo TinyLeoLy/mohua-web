@@ -8,7 +8,9 @@
 				<p>
 					提供高效、灵活的创作环境，通过先进的自然语言处理技术，帮助用户快速生成高质量的文本内容，拓展了创作的可能性，提升效率，满足多样化的写作需求。
 				</p>
-				<div class="btn mh-btn" @click="contactService">沟通咨询</div>
+				<div class="btn">
+					<QrCodeButton />
+				</div>
 			</div>
 		</div>
 
@@ -89,9 +91,9 @@
 <script setup>
 import MhFooter from '@/components/footer.vue';
 import { scrollIntoView } from '@/utils/hook';
+import QrCodeButton from '@/components/qrCodeButton.vue';
 
 scrollIntoView();
-const contactService = () => {};
 </script>
 <style lang="scss" scoped>
 .product-view {
@@ -121,17 +123,6 @@ const contactService = () => {};
 		}
 		.btn {
 			margin-top: 135px;
-			border: 1px solid #177cbe;
-			color: #177cbe;
-			width: 192px;
-			height: 55px;
-			border-radius: 82px;
-			font-family: PingFang SC;
-			font-weight: 500;
-			font-size: 18px;
-			line-height: 55px;
-			text-align: center;
-			cursor: pointer;
 		}
 		.line {
 			margin-top: 37px;

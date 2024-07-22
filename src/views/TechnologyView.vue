@@ -12,7 +12,9 @@
 					案，潜心打造了“语言即结果”的技术架构，来辅助政府、军工、央国企等企业
 				</p>
 				<p>组织直面真需求、解决真问题</p>
-				<div class="btn mh-btn" @click="contactService">沟通咨询</div>
+				<div class="btn">
+					<QrCodeButton />
+				</div>
 			</div>
 		</div>
 		<div class="center flex-column" id="center">
@@ -88,6 +90,7 @@
 import MhFooter from '@/components/footer.vue';
 import { ref } from 'vue';
 import { scrollIntoView } from '@/utils/hook';
+import QrCodeButton from '@/components/qrCodeButton.vue';
 
 scrollIntoView();
 
@@ -178,7 +181,6 @@ const onMouseLeave = (item) => {
 	item.visible = false;
 };
 
-const contactService = () => {};
 </script>
 <style lang="scss" scoped>
 .technology-view {
@@ -207,17 +209,6 @@ const contactService = () => {};
 		}
 		.btn {
 			margin-top: 135px;
-			border: 1px solid #177cbe;
-			color: #177cbe;
-			width: 192px;
-			height: 55px;
-			border-radius: 82px;
-			font-family: PingFang SC;
-			font-weight: 500;
-			font-size: 18px;
-			line-height: 55px;
-			text-align: center;
-			cursor: pointer;
 		}
 		.line {
 			margin-top: 37px;

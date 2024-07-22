@@ -10,7 +10,9 @@
 					域场景需求，为客户提供定制化、高效率的大模型解决方案，帮助客户实现数据驱
 					动、智能化的发展目标。
 				</p>
-				<div class="btn mh-btn" @click="contactService">沟通咨询</div>
+				<div class="btn">
+					<QrCodeButton />
+				</div>
 			</div>
 		</div>
 
@@ -92,6 +94,7 @@
 import MhFooter from '@/components/footer.vue';
 import { useRouter } from 'vue-router';
 import { scrollIntoView } from '@/utils/hook';
+import QrCodeButton from '@/components/qrCodeButton.vue';
 
 scrollIntoView();
 
@@ -100,7 +103,6 @@ const jumpTo = (name) => {
 	router.push({ name });
 };
 
-const contactService = () => {};
 </script>
 <style lang="scss" scoped>
 .product-view {
@@ -129,17 +131,6 @@ const contactService = () => {};
 		}
 		.btn {
 			margin-top: 135px;
-			border: 1px solid #177cbe;
-			color: #177cbe;
-			width: 192px;
-			height: 55px;
-			border-radius: 82px;
-			font-family: PingFang SC;
-			font-weight: 500;
-			font-size: 18px;
-			line-height: 55px;
-			text-align: center;
-			cursor: pointer;
 		}
 		.line {
 			margin-top: 37px;

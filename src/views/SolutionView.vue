@@ -12,7 +12,9 @@
 					论在企业的业务智能化、政府的决策支持还是军队的信息化建设，都能提供定
 				</p>
 				<p>制化、高效率的大模型解决方案。</p>
-				<div class="btn mh-btn" @click="contactService">沟通咨询</div>
+				<div class="btn">
+					<QrCodeButton />
+				</div>
 			</div>
 		</div>
 		<div class="custom">
@@ -131,9 +133,9 @@
 <script setup>
 import MhFooter from '@/components/footer.vue';
 import { scrollIntoView } from '@/utils/hook';
+import QrCodeButton from '@/components/qrCodeButton.vue';
 
 scrollIntoView();
-const contactService = () => {};
 </script>
 <style lang="scss" scoped>
 .solution-view {
@@ -163,17 +165,6 @@ const contactService = () => {};
 		}
 		.btn {
 			margin-top: 135px;
-			border: 1px solid #177cbe;
-			color: #177cbe;
-			width: 192px;
-			height: 55px;
-			border-radius: 82px;
-			font-family: PingFang SC;
-			font-weight: 500;
-			font-size: 18px;
-			line-height: 55px;
-			text-align: center;
-			cursor: pointer;
 		}
 		.line {
 			margin-top: 37px;

@@ -8,7 +8,9 @@
 				<p>
 					Copilot产品是“AI+业务”最直观的表现形式。用户只需通过语音或文本下达指令，便可以随时随地调用大模型来完成各种业务操作。这种直接的调用方式大大提高了用户的操作效率。相比传统的窗口式交互方式，Copilot避免了重复跳转的问题，更有针对性地聚焦于用户当前的任务，使得交互更加流畅、高效。
 				</p>
-				<div class="btn mh-btn" @click="contactService">沟通咨询</div>
+				<div class="btn">
+					<QrCodeButton />
+				</div>
 			</div>
 		</div>
 
@@ -97,9 +99,9 @@
 <script setup>
 import MhFooter from '@/components/footer.vue';
 import { scrollIntoView } from '@/utils/hook';
+import QrCodeButton from '@/components/qrCodeButton.vue';
 
 scrollIntoView();
-const contactService = () => {};
 </script>
 <style lang="scss" scoped>
 .product-view {
@@ -129,17 +131,6 @@ const contactService = () => {};
 		}
 		.btn {
 			margin-top: 75px;
-			border: 1px solid #177cbe;
-			color: #177cbe;
-			width: 192px;
-			height: 55px;
-			border-radius: 82px;
-			font-family: PingFang SC;
-			font-weight: 500;
-			font-size: 18px;
-			line-height: 55px;
-			text-align: center;
-			cursor: pointer;
 		}
 		.line {
 			margin-top: 37px;

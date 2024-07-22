@@ -13,7 +13,9 @@
 						面的人工智能大模型技术，为客户提供最优质、最具价值的人工智能解决方案
 					</p>
 				</div>
-				<div class="btn mh-btn" @click="contactService">探索更多</div>
+				<div class="btn">
+					<QrCodeButton>探索更多</QrCodeButton>
+				</div>
 			</div>
 		</div>
 		<div class="company flex-row" id="company">
@@ -117,16 +119,14 @@
 			<div class="button mh-btn" @click="jumpTo('case')">探索更多</div>
 		</div>
 		<MhFooter />
+		<QrCode />
 	</div>
 </template>
 <script setup>
 import MhFooter from '@/components/footer.vue';
-import { onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 import { scrollIntoView } from '@/utils/hook';
-
-scrollIntoView();
-const contactService = () => {};
+import QrCodeButton from '@/components/qrCodeButton.vue';
 
 const router = useRouter();
 const jumpTo = (name) => {
@@ -192,9 +192,6 @@ scrollIntoView();
 		}
 		.btn {
 			margin-top: 100px;
-			border: 1px solid #177cbe;
-			color: #177cbe;
-			@include btn();
 		}
 	}
 	.company {

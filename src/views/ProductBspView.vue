@@ -8,7 +8,9 @@
 				<p>
 					在进行业务模拟仿真时，有一些能根据环境信息自主做出决策的目标能让仿真结果更接近真实情况，例如在军事作战仿真中可以包含一些自主决策的蓝方目标。同时，面向需要多工种协作来达成目标的复杂场景时，Multi-Agents平台可以扮演多个角色，启发式地输出一系列业务仿真结果。
 				</p>
-				<div class="btn mh-btn" @click="contactService">沟通咨询</div>
+				<div class="btn">
+					<QrCodeButton />
+				</div>
 			</div>
 		</div>
 
@@ -97,9 +99,9 @@
 <script setup>
 import MhFooter from '@/components/footer.vue';
 import { scrollIntoView } from '@/utils/hook';
+import QrCodeButton from '@/components/qrCodeButton.vue';
 
 scrollIntoView();
-const contactService = () => {};
 </script>
 <style lang="scss" scoped>
 .product-view {
@@ -129,17 +131,6 @@ const contactService = () => {};
 		}
 		.btn {
 			margin-top: 75px;
-			border: 1px solid #177cbe;
-			color: #177cbe;
-			width: 192px;
-			height: 55px;
-			border-radius: 82px;
-			font-family: PingFang SC;
-			font-weight: 500;
-			font-size: 18px;
-			line-height: 55px;
-			text-align: center;
-			cursor: pointer;
 		}
 		.line {
 			margin-top: 37px;

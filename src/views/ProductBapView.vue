@@ -8,7 +8,9 @@
 				<p>
 					只需给出业务目标，员工助手平台会独立思考并做出行动，根据给定任务详细拆解出每一步的计划步骤，与内外部系统进行交互，直到目标达成。业务系统的功能被封装为Agents的插件和工作流，大量的日常任务可以借由Agents来完成，员工下达指令就可以完成操作，人工操作和决策的效率可以提高50%以上。
 				</p>
-				<div class="btn mh-btn" @click="contactService">沟通咨询</div>
+				<div class="btn">
+					<QrCodeButton />
+				</div>
 			</div>
 		</div>
 
@@ -98,10 +100,10 @@
 <script setup>
 import MhFooter from '@/components/footer.vue';
 import { scrollIntoView } from '@/utils/hook';
+import QrCodeButton from '@/components/qrCodeButton.vue';
 
 scrollIntoView();
 
-const contactService = () => {};
 </script>
 <style lang="scss" scoped>
 .product-view {
@@ -131,17 +133,6 @@ const contactService = () => {};
 		}
 		.btn {
 			margin-top: 75px;
-			border: 1px solid #177cbe;
-			color: #177cbe;
-			width: 192px;
-			height: 55px;
-			border-radius: 82px;
-			font-family: PingFang SC;
-			font-weight: 500;
-			font-size: 18px;
-			line-height: 55px;
-			text-align: center;
-			cursor: pointer;
 		}
 		.line {
 			margin-top: 37px;

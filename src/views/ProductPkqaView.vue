@@ -5,8 +5,13 @@
 			<div class="left">
 				<div class="title">私有知识问答平台</div>
 				<div class="line"></div>
-				<p>结合先进的大语言模型技术，轻松识别各种文档，自动生成专属知识库，带来知识归纳、构建、问答、推荐等体验，帮助用户提升工作效率。</p>
-				<div class="btn mh-btn" @click="contactService">沟通咨询</div>
+				<p>
+					结合先进的大语言模型技术，轻松识别各种文档，自动生成专属知识库，带来知识归纳、构建、问答、推荐等体验，帮助用户提升工作效率。
+				</p>
+
+				<div class="btn">
+					<QrCodeButton />
+				</div>
 			</div>
 		</div>
 
@@ -58,7 +63,9 @@
 				<div class="item">
 					<span class="name">知识建库</span>
 					<div class="des">
-						<p>提供智能化管理能力，支持多格式知识文档上传、自动向量化生成统一的面向</p>
+						<p>
+							提供智能化管理能力，支持多格式知识文档上传、自动向量化生成统一的面向
+						</p>
 						<p>全域非结构化数据处理的AI知识库。</p>
 					</div>
 					<img src="@/assets/images/product/common/01.png" alt="" />
@@ -66,7 +73,9 @@
 				<div class="item">
 					<span class="name">知识总结</span>
 					<div class="des">
-						<p>精确快速地从非结构化文本中进行知识抽取，构建领域知识图谱，可对用户给</p>
+						<p>
+							精确快速地从非结构化文本中进行知识抽取，构建领域知识图谱，可对用户给
+						</p>
 						<p>出的信息进行归类，准确总结长文本摘要。</p>
 					</div>
 					<img src="@/assets/images/product/common/02.png" alt="" />
@@ -74,15 +83,21 @@
 				<div class="item">
 					<span class="name">智能搜索</span>
 					<div class="des">
-						<p>理解用户提出的问题并准确抽取关键信息，基于上下文理解能力，平台可以提</p>
-						<p>供智能搜索功能，根据用户提出的问题和上下文信息，准确匹配相关内容。</p>
+						<p>
+							理解用户提出的问题并准确抽取关键信息，基于上下文理解能力，平台可以提
+						</p>
+						<p>
+							供智能搜索功能，根据用户提出的问题和上下文信息，准确匹配相关内容。
+						</p>
 					</div>
 					<img src="@/assets/images/product/common/03.png" alt="" />
 				</div>
 				<div class="item">
 					<span class="name">集成扩展</span>
 					<div class="des">
-						<p>提供与其他系统的集成能力，或外部服务的集成，以及具有一定的扩展性，支持</p>
+						<p>
+							提供与其他系统的集成能力，或外部服务的集成，以及具有一定的扩展性，支持
+						</p>
 						<p>定制化需求和功能扩展。</p>
 					</div>
 					<img src="@/assets/images/product/common/04.png" alt="" />
@@ -130,9 +145,9 @@
 import { ref } from 'vue';
 import MhFooter from '@/components/footer.vue';
 import { scrollIntoView } from '@/utils/hook';
+import QrCodeButton from '@/components/qrCodeButton.vue';
 
 scrollIntoView();
-const contactService = () => {};
 
 const list1 = ref(['财务', '能源', '教育', '政务', '金融', '制造']);
 const list2 = ref([
@@ -196,17 +211,6 @@ const list4 = ref([
 		}
 		.btn {
 			margin-top: 135px;
-			border: 1px solid #177cbe;
-			color: #177cbe;
-			width: 192px;
-			height: 55px;
-			border-radius: 82px;
-			font-family: PingFang SC;
-			font-weight: 500;
-			font-size: 18px;
-			line-height: 55px;
-			text-align: center;
-			cursor: pointer;
 		}
 		.line {
 			margin-top: 37px;
